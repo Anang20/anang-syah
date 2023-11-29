@@ -12,9 +12,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import { ThemeModeButton } from "@/components/ui/theme-mode-button";
 import { useEffect, useState } from "react";
+import { Divide as Hamburger } from 'hamburger-react'
 
 const NavMenu = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   let prevScrollPos = 0;
 
   const handleScroll = () => {
@@ -44,9 +46,13 @@ const NavMenu = () => {
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
-      <ThemeModeButton />
+      <div className="flex gap-5 items-center">
+        <ThemeModeButton />
+        <Hamburger toggled={isOpen} onToggle={setIsOpen} size={35} easing="ease-out" hideOutline={false} rounded/>
+      </div>
     </NavigationMenu>
   );
 };
 
 export default NavMenu;
+ 
