@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <NavMenu />
-          <main className='px-5 md:px-20'>
+          <main>
             {children}
           </main>
         </ThemeProvider>

@@ -33,8 +33,8 @@ const NavMenu = () => {
   }, [])
 
   return (
-    <NavigationMenu className={`flex sticky top-0 min-w-full h-16 px-5 md:px-20 border-b-2 items-center justify-between transition-transform duration-500 transform ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <h1 className="font-bold text-2xl">Anang</h1>
+    <NavigationMenu className={`flex sticky -top-1 min-w-full h-16 px-5 md:px-20 border-b-2 items-center justify-between transition-transform duration-500 transform ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <h1 className="font-bold text-2xl">Anang Syah</h1>
       <NavigationMenuList className="hidden md:flex">
         {menuItem?.map((item, index) => (
           <NavigationMenuItem key={index}>
@@ -48,7 +48,9 @@ const NavMenu = () => {
       </NavigationMenuList>
       <div className="flex gap-5 items-center">
         <ThemeModeButton />
-        <Hamburger toggled={isOpen} onToggle={setIsOpen} size={35} easing="ease-out" hideOutline={false} rounded/>
+        <div className="block lg:hidden">
+          <Hamburger toggled={isOpen} onToggle={setIsOpen} size={35} easing="ease-out" hideOutline={false} rounded/>
+        </div>
       </div>
     </NavigationMenu>
   );

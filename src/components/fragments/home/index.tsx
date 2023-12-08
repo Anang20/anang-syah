@@ -1,14 +1,12 @@
-import { useTheme } from "next-themes";
-import Image from "next/image";
 import React from "react";
 import { HeroSectionHome } from "./HeroSection";
+import Section from "@/components/Section";
 
 const Home = () => {
-  const { theme } = useTheme();
   return (
-    <section className="flex justify-center items-center h-screen w-full">
+    <Section className="flex flex-col-reverse lg:flex-row h-4/5 lg:h-screen w-full gap-10 lg:gap-0">
       <HeroSectionHome/>
-    </section>
+    </Section>
   );
 };
 
