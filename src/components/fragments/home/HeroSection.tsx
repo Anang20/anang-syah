@@ -5,8 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 export const HeroSectionHome = () => {
   return (
     <>
-      <div className="flex justify-center flex-col font-semibold text-2xl lg:text-4xl w-full lg:w-3/6 gap-3">
-        <h1>Hi, I&lsquo; Anang Syah Amirul Haqim👋</h1>
+      <div className="flex justify-center flex-col font-semibold text-2xl lg:text-4xl w-full lg:w-3/6 gap-1 md:gap-3">
+        <h1>Hi, I&lsquo;am Anang Syah Amirul Haqim👋</h1>
         <div>
           <TypeAnimation
             preRenderFirstString={true}
