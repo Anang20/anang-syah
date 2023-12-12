@@ -1,5 +1,5 @@
-import { Menus, Projects } from "@/lib/types";
-import { SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3, SiJavascript } from "react-icons/si";
+import { Menus, Projects, skills } from "@/lib/types";
+import { SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiPhp, SiReact, SiVuedotjs, SiNuxtdotjs, SiBootstrap, SiAntdesign, SiAxios, SiReactquery, SiMui, SiVuetify, SiRadixui } from "react-icons/si";
 
 export const menuItem: Menus = [
   {
@@ -28,7 +28,8 @@ export const menuItem: Menus = [
   },
 ];
 
-const iconSize = 'h-6 w-6'
+const iconSize = 'h-6 w-6';
+const skillIconSize = 'h-14 w-14';
 
 export const ProjectItems: Projects = [
   {
@@ -100,7 +101,7 @@ export const ProjectItems: Projects = [
   {
     title: "Project 1",
     description: "testtttt kuyyy",
-    image: "/images/nft-marketplace.png",
+    image: "/images/project1.png",
     techStack: [
       {
         name: 'Next JS',
@@ -118,7 +119,7 @@ export const ProjectItems: Projects = [
   {
     title: "Project 1",
     description: "testtttt kuyyy",
-    image: "/images/nft-marketplace.png",
+    image: "/images/project1.png",
     techStack: [
       {
         name: 'Next JS',
@@ -134,3 +135,91 @@ export const ProjectItems: Projects = [
     showRepo: false,
   },
 ];
+
+export const skillItems: skills = [
+    {
+      category: 'language',
+      name: "HTML",
+      icon: <SiHtml5 className={skillIconSize}/>
+    },
+    {
+      category: 'language',
+      name: "CSS",
+      icon: <SiCss3 className={skillIconSize}/>
+    },
+    {
+      category: 'language',
+      name: "JavaScript",
+      icon: <SiJavascript className={skillIconSize}/>
+    },
+    {
+      category: 'language',
+      name: "TypeScript",
+      icon: <SiTypescript className={skillIconSize}/>
+    },
+    {
+      category: 'language',
+      name: "PHP",
+      icon: <SiPhp className={skillIconSize}/>
+    },
+    {
+      category: 'framework',
+      name: "React JS",
+      icon: <SiReact className={skillIconSize}/>
+    },
+    {
+      category: 'framework',
+      name: "Vue JS",
+      icon: <SiVuedotjs className={skillIconSize}/>
+    },
+    {
+      category: 'framework',
+      name: "Next JS",
+      icon: <SiNextdotjs className={skillIconSize}/>
+    },
+    {
+      category: 'framework',
+      name: "Nuxt JS",
+      icon: <SiNuxtdotjs className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Bootstrap",
+      icon: <SiBootstrap className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Radix UI",
+      icon: <SiRadixui className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Material UI",
+      icon: <SiMui className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Ant Design",
+      icon: <SiAntdesign className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Vuetify",
+      icon: <SiVuetify className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "Axios",
+      icon: <SiAxios className={skillIconSize}/>
+    },
+    {
+      category: 'library',
+      name: "React Query",
+      icon: <SiReactquery className={skillIconSize}/>
+    },
+]
