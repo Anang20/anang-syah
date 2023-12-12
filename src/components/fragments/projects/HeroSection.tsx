@@ -76,7 +76,7 @@ const HeroSectionProjects = () => {
                     </Link>
                     {item.showRepo && item.repoUrl && (
                       <Link href={item.repoUrl} target="_blank">
-                        <Button>
+                        <Button variant={'outline'}>
                           Repository
                           <Github className="ml-1" />
                         </Button>
