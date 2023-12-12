@@ -12,3 +12,9 @@ export type Projects = {
     repoUrl: string | null,
     showRepo: Boolean,
 }[]
+
+export type skills = {
+    category: 'framework' | 'language' | 'library'
+    name: string,
+    icon: React.ReactElement
+}[]
