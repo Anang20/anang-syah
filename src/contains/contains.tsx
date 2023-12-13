@@ -1,5 +1,6 @@
-import { Menus, Projects, skills } from "@/lib/types";
-import { SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiPhp, SiReact, SiVuedotjs, SiNuxtdotjs, SiBootstrap, SiAntdesign, SiAxios, SiReactquery, SiMui, SiVuetify, SiRadixui } from "react-icons/si";
+import { Menus, Projects, contactType, skills } from "@/lib/types";
+import { Mail, PhoneCall } from "lucide-react";
+import { SiNextdotjs, SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiTypescript, SiPhp, SiReact, SiVuedotjs, SiNuxtdotjs, SiBootstrap, SiAntdesign, SiAxios, SiReactquery, SiMui, SiVuetify, SiRadixui, SiSwr, SiWhatsapp } from "react-icons/si";
 
 export const menuItem: Menus = [
   {
@@ -137,89 +138,109 @@ export const ProjectItems: Projects = [
 ];
 
 export const skillItems: skills = [
-    {
-      category: 'language',
-      name: "HTML",
-      icon: <SiHtml5 className={skillIconSize}/>
-    },
-    {
-      category: 'language',
-      name: "CSS",
-      icon: <SiCss3 className={skillIconSize}/>
-    },
-    {
-      category: 'language',
-      name: "JavaScript",
-      icon: <SiJavascript className={skillIconSize}/>
-    },
-    {
-      category: 'language',
-      name: "TypeScript",
-      icon: <SiTypescript className={skillIconSize}/>
-    },
-    {
-      category: 'language',
-      name: "PHP",
-      icon: <SiPhp className={skillIconSize}/>
-    },
-    {
-      category: 'framework',
-      name: "React JS",
-      icon: <SiReact className={skillIconSize}/>
-    },
-    {
-      category: 'framework',
-      name: "Vue JS",
-      icon: <SiVuedotjs className={skillIconSize}/>
-    },
-    {
-      category: 'framework',
-      name: "Next JS",
-      icon: <SiNextdotjs className={skillIconSize}/>
-    },
-    {
-      category: 'framework',
-      name: "Nuxt JS",
-      icon: <SiNuxtdotjs className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Bootstrap",
-      icon: <SiBootstrap className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Radix UI",
-      icon: <SiRadixui className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Material UI",
-      icon: <SiMui className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Ant Design",
-      icon: <SiAntdesign className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Vuetify",
-      icon: <SiVuetify className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "Axios",
-      icon: <SiAxios className={skillIconSize}/>
-    },
-    {
-      category: 'library',
-      name: "React Query",
-      icon: <SiReactquery className={skillIconSize}/>
-    },
+  {
+    category: 'language',
+    name: "HTML",
+    icon: <SiHtml5 className={skillIconSize} />
+  },
+  {
+    category: 'language',
+    name: "CSS",
+    icon: <SiCss3 className={skillIconSize} />
+  },
+  {
+    category: 'language',
+    name: "JavaScript",
+    icon: <SiJavascript className={skillIconSize} />
+  },
+  {
+    category: 'language',
+    name: "TypeScript",
+    icon: <SiTypescript className={skillIconSize} />
+  },
+  {
+    category: 'language',
+    name: "PHP",
+    icon: <SiPhp className={skillIconSize} />
+  },
+  {
+    category: 'framework',
+    name: "React JS",
+    icon: <SiReact className={skillIconSize} />
+  },
+  {
+    category: 'framework',
+    name: "Vue JS",
+    icon: <SiVuedotjs className={skillIconSize} />
+  },
+  {
+    category: 'framework',
+    name: "Next JS",
+    icon: <SiNextdotjs className={skillIconSize} />
+  },
+  {
+    category: 'framework',
+    name: "Nuxt JS",
+    icon: <SiNuxtdotjs className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Bootstrap",
+    icon: <SiBootstrap className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Tailwind CSS",
+    icon: <SiTailwindcss className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Radix UI",
+    icon: <SiRadixui className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Material UI",
+    icon: <SiMui className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Ant Design",
+    icon: <SiAntdesign className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Vuetify",
+    icon: <SiVuetify className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "Axios",
+    icon: <SiAxios className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "React Query",
+    icon: <SiReactquery className={skillIconSize} />
+  },
+  {
+    category: 'library',
+    name: "SWR",
+    icon: <SiSwr className={skillIconSize} />
+  },
+];
+
+export const contactItems: contactType = [
+  {
+    icon: <SiWhatsapp className="w-6 h-6"/>,
+    label: '+62 8967 0068 639',
+  },
+  {
+    icon: <PhoneCall />,
+    label: '+62 8967 0068 639',
+  },
+  {
+    icon: <Mail />,
+    label: 'anangsyah766@gmail.com',
+  },
 ]
