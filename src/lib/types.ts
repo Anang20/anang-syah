@@ -18,3 +18,8 @@ export type skills = {
     name: string,
     icon: React.ReactElement
 }[]
+
+export type contactType = {
+    icon: React.ReactElement,
+    label: string
+}[]
