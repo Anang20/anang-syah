@@ -1,12 +1,9 @@
-"use client";
-
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeProvider";
 import NavMenu from "@/components/fragments/NavMenu";
-import Loading from "@/components/ui/loading";
-import { useEffect, useState } from "react";
+import { UIContextProvider } from "@/context/UIContext";
 
 const poppins = Poppins({ weight: "400", subsets: ["latin"] });
 
@@ -20,30 +17,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsLoading(false);
-    }, 3000);
-  
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
 
   return (
     <html lang="en">
       <body className={poppins.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {isLoading ? (
-            <Loading />
-          ) : (
-            <>
-              <NavMenu />
-              <main className={`transition-opacity ${isLoading ? 'opacity-0' : 'opacity-100'}`}>{children}</main>
-            </>
-          )}
+          <UIContextProvider>
+            <NavMenu />
+            <main>{children}</main>
+          </UIContextProvider>
         </ThemeProvider>
       </body>
     </html>
