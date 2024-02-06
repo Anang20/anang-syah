@@ -44,7 +44,7 @@ const HeroSectionSkills = () => {
         </div>
       </RadioGroup>
       <Card className="pb-12 pt-24 px-5 md:px-10 w-full md:w-[80%] min-h-[46rem]">
-        <CardContent className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-10">
+        <CardContent className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-10 bg-transparent">
           {skills?.map((item, index) => (
             <div className="flex flex-col justify-center items-center gap-3 rounded-lg py-2 hover:-mt-5 hover:border border-solid border-primary cursor-pointer transition-tranform duration-150 transform`" key={index}>
               {item.icon}
